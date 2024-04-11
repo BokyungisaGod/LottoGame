@@ -31,7 +31,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         switch (curBtnType)
         {
             case BTNType.New:
-                SceneManager.LoadScene("NextSampleScene");
+                SceneManager.LoadScene("underthesea");
                 break;
             case BTNType.Option:
                 CanvasGroupOn(soundGroup);
