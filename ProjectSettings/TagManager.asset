@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Audio
+  - border
+  - Border
   layers:
   - Default
   - TransparentFX
