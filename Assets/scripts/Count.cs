@@ -22,7 +22,11 @@ public class Count : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("lotto");
+            Invoke("SceneChange", 1.5f);
         }
+    }
+    public void SceneChange() 
+    {
+        SceneManager.LoadScene("lotto");
     }
 }

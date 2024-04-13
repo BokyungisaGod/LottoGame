@@ -10,6 +10,7 @@ public class Door : MonoBehaviour
     public float maxDistance = 10f; // 최대 거리
     public float minAlpha = 0.1f; // 최소 알파 값
     public float maxAlpha = 1f; // 최대 알파 값
+    public Animator anim;
 
     private SpriteRenderer objectRenderer; // 대상 오브젝트의 SpriteRenderer 컴포넌트
 
@@ -31,6 +32,12 @@ public class Door : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        anim.SetTrigger("On");
+        Invoke("SceneChange", 3f);
+    }
+    public void SceneChange() 
+    {
+        
         SceneManager.LoadScene("SampleScene");
     }
 }

@@ -500,7 +500,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_0": 4091436316806019551
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_1": -5512774525207328661
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_10": -1386189012256351166
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_11": -5464543018207661462
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_12": 5350266022877866014
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_13": 2646405599606891681
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_14": -1933012113001227392
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_15": -4757213395308078395
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_2": 1964450691167665901
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_3": -6000912095326506244
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_4": -4066842518847370522
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_5": -7388480456110047634
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_6": 2287566361051243094
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_7": 6332897107007469601
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_8": -2450650934034917361
+      "\uC6D0\uC22D\uC774\uC4F0-removebg-preview_9": 5526747843401967735
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

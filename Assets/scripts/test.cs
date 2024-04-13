@@ -15,8 +15,10 @@ public class test : MonoBehaviour
     public static int[] numbers;
     public Count countnumber;
 
+
     private void Start()
     {
+
     }
     public void OnButtonClicked()
     {
