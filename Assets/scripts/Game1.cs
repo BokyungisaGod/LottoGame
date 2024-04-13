@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Game1 : MonoBehaviour
 {
-    public Animator start;
-    public Animator target1;
-    public Animator target2;
-    public Animator target3;
-    public Animator target4;
-    public Animator target5;
-    public string triName;
+    private Animator start;
+    private Animator target1;
+    private Animator target2;
+    private Animator target3;
+    private Animator target4;
+    private Animator target5;
+    private string triName;
     private bool check = false;
     private void Start()
     {
