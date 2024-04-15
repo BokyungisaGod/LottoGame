@@ -5,29 +5,29 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public Transform playerTransform; // ÇÃ·¹ÀÌ¾î ¿ÀºêÁ§Æ®ÀÇ Transform
-    public Transform objectTransform; // ´ë»ó ¿ÀºêÁ§Æ®ÀÇ Transform
-    public float maxDistance = 10f; // ÃÖ´ë °Å¸®
-    public float minAlpha = 0.1f; // ÃÖ¼Ò ¾ËÆÄ °ª
-    public float maxAlpha = 1f; // ÃÖ´ë ¾ËÆÄ °ª
+    public Transform playerTransform; // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Transform
+    public Transform objectTransform; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ Transform
+    public float maxDistance = 10f; // ï¿½Ö´ï¿½ ï¿½Å¸ï¿½
+    public float minAlpha = 0.1f; // ï¿½Ö¼ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
+    public float maxAlpha = 1f; // ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½
     public Animator anim;
 
-    private SpriteRenderer objectRenderer; // ´ë»ó ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer ÄÄÆ÷³ÍÆ®
+    private SpriteRenderer objectRenderer; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ SpriteRenderer ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     private void Start()
     {
-        objectRenderer = GetComponent<SpriteRenderer>(); // ´ë»ó ¿ÀºêÁ§Æ®ÀÇ SpriteRenderer ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿È
+        objectRenderer = GetComponent<SpriteRenderer>(); // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ SpriteRenderer ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
     private void Update()
     {
-        // ÇÃ·¹ÀÌ¾î¿Í ´ë»ó ¿ÀºêÁ§Æ® »çÀÌÀÇ °Å¸® °è»ê
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ ï¿½ï¿½ï¿½
         float distance = Vector3.Distance(playerTransform.position, objectTransform.position);
 
-        // °Å¸®¿¡ µû¶ó ¾ËÆÄ °ª Á¶Á¤
+        // ï¿½Å¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         float alpha = Mathf.Lerp(maxAlpha, minAlpha, Mathf.InverseLerp(0, maxDistance, distance));
 
-        // ¾ËÆÄ °ª Àû¿ë
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         objectRenderer.color = new Color(objectRenderer.color.r, objectRenderer.color.g, objectRenderer.color.b, alpha);
     }
     public void OnCollisionEnter2D(Collision2D collision)
@@ -38,6 +38,6 @@ public class Door : MonoBehaviour
     public void SceneChange() 
     {
         
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Jungle");
     }
 }

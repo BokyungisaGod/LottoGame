@@ -1926,7 +1926,7 @@ MonoBehaviour:
   musicSource: {fileID: 0}
   SFXSource: {fileID: 0}
   background: {fileID: 0}
-  click: {fileID: 0}
+  click: {fileID: 8300000, guid: ffb159a21c8a04135a5616979c828fab, type: 3}
   attack: {fileID: 0}
   boom: {fileID: 0}
   hide: {fileID: 0}

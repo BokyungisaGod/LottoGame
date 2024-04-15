@@ -16,7 +16,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip attack;
     public AudioClip boom;
     public AudioClip hide;
-    
+    public AudioClip Bubble;
+    public AudioClip Jungle;
+    public AudioClip Sea;
 
     private void Start()
     {
