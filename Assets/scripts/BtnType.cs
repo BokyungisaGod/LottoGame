@@ -27,7 +27,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     public void OnBtnClick()
     {
         //SoundManager.instance.SFXPlay("Click", clip);
-        //audiomanager.PlaySFX(audiomanager.click);
+        audiomanager.PlaySFX(audiomanager.click);
         switch (curBtnType)
         {
             case BTNType.New:

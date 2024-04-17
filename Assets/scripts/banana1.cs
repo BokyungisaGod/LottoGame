@@ -8,28 +8,28 @@ public class banana1 : MonoBehaviour
     public GameObject bananaPrefab;
 
     // 던질 과자의 최소와 최대 개수
-    public int minbanana = 1;
     public int maxbanana = 5;
 
     // 과자를 던질 최소와 최대 힘
     public float minForce = 5f;
     public float maxForce = 15f;
+    public int cnt;
 
-    void Start()
+
+    private void Start()
     {
-        // 과자 던지기
         Launchbanana();
     }
-
     void Launchbanana()
     {
-        // 과자 개수 무작위로 선택
-        int numbanana = Random.Range(minbanana, maxbanana + 1);
-
-        for (int i = 0; i < numbanana; i++)
+        int bananaNum = Random.Range(1,20);
+        for (int i = 0; i < bananaNum; i++) 
         {
+            float bananaPos = Random.Range(-8, 9);
+
             // 과자 생성
-            GameObject banana = Instantiate(bananaPrefab, transform.position, Quaternion.identity);
+            Vector2 newPos = new Vector2(bananaPos, -6f);
+            GameObject banana = Instantiate(bananaPrefab, newPos, Quaternion.identity);
 
             // Rigidbody 컴포넌트 가져오기
             Rigidbody rb = banana.GetComponent<Rigidbody>();
@@ -38,12 +38,15 @@ public class banana1 : MonoBehaviour
             if (rb == null)
             {
                 Debug.LogWarning("Rigidbody 컴포넌트를 찾을 수 없습니다: " + banana.name);
-                continue;
             }
 
             // 과자에 무작위 힘 가하기
             float force = Random.Range(minForce, maxForce);
             rb.AddForce(Vector3.up * force, ForceMode.Impulse);
         }
+        cnt++;
+        if(cnt<5)
+            Invoke("Launchbanana", 3f);
+
     }
 }
