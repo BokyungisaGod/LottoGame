@@ -1717,6 +1717,7 @@ MonoBehaviour:
   minAlpha: 0
   maxAlpha: 1
   anim: {fileID: 174743063}
+  portname: Jungle
 --- !u!212 &1453248363
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2965,6 +2966,7 @@ MonoBehaviour:
   minAlpha: 0
   maxAlpha: 1
   anim: {fileID: 174743063}
+  portname: Sea
 --- !u!212 &2069732177
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
+using NUnit.Framework;
 using UnityEngine;
-
+using TMPro;
 public class banana1 : MonoBehaviour
 {
     // 과자 프리팹
     public GameObject bananaPrefab;
+    public TextMeshProUGUI text;
+    public int index;
 
     // 던질 과자의 최소와 최대 개수
     public int maxbanana = 5;
@@ -14,15 +17,18 @@ public class banana1 : MonoBehaviour
     public float minForce = 5f;
     public float maxForce = 15f;
     public int cnt;
-
+    private List<int> myList;
+    public GameObject checkSet;
 
     private void Start()
     {
-        Launchbanana();
+        myList = new List<int>();
+        Invoke("Launchbanana", 4f);
     }
     void Launchbanana()
     {
         int bananaNum = Random.Range(1,20);
+        myList.Add(bananaNum);
         for (int i = 0; i < bananaNum; i++) 
         {
             float bananaPos = Random.Range(-8, 9);
@@ -47,6 +53,35 @@ public class banana1 : MonoBehaviour
         cnt++;
         if(cnt<5)
             Invoke("Launchbanana", 3f);
+        else
+        {
+            Invoke("checkShow", 4f);
+            foreach (int item in myList)
+            {
+                Debug.Log(item);
+            }
+        }
+    }
+    public void checkShow()
+    {
+        checkSet.SetActive(true);
+
+    }
+    public void checkNum()
+    {
+        int num = int.Parse(text.text);
+        if (myList[index] == num)
+        {
+            Debug.Log("정답");
+            if (index == 4)
+                Debug.Log("승리");
+        }
+        else
+        {
+            Debug.Log("패배");
+
+        }
+        index++;
 
     }
 }

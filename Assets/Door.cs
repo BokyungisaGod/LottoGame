@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
     public float minAlpha = 0.1f; // �ּ� ���� ��
     public float maxAlpha = 1f; // �ִ� ���� ��
     public Animator anim;
+    public string portname;
 
     private SpriteRenderer objectRenderer; // ��� ������Ʈ�� SpriteRenderer ������Ʈ
 
@@ -35,9 +36,18 @@ public class Door : MonoBehaviour
         anim.SetTrigger("On");
         Invoke("SceneChange", 3f);
     }
-    public void SceneChange() 
+    public void SceneChange()
     {
+        switch (portname)
+        {
+            case "Jungle":
+                SceneManager.LoadScene("Jungle");
+                break;
+            case "Sea":
+                SceneManager.LoadScene("SampleScene");
+                break;
+
+        }
         
-        SceneManager.LoadScene("Jungle");
     }
 }
